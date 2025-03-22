@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Joke Generator</title>
+    <title>Joke of the Day</title>
+    <link rel="icon" href="favicon.png">
 </head>
-<body>
+<body style="font-family: sans-serif;">
     <header>
-        <h1>Random Joke Generator</h1>
+        <h1 id="title">Joke of the Day</h1>
     </header>
     <main>
-        <section>
-            <h2 id="title">Joke of the Day</h2>
-            <p id="joke"></p>
-        </section>
-        <section>
-            <h2>Generate a New Random Joke by Category</h2>
-            <menu>
-                <li><button onclick="dev()">Programming</button></li>
-                <li><button onclick="misc()">Miscellaneous</button></li>
-                <li><button onclick="pun()">Pun</button></li>
-                <li><button onclick="boo()">Spooky</button></li>
-                <li><button onclick="xmas()">Christmas</button></li>
-            </menu>
-        </section>
+        <p id="joke"></p>
+        <h2>Generate a New Random Joke by Category</h2>
+        <menu style="display: flex; flex-wrap: wrap; gap: 1rem; padding: 0; list-style: none;">
+            <li>
+                <button onclick="getJoke()">Programming</button>
+            </li>
+            <li>
+                <button onclick="getJoke()">Miscellaneous</button>
+            </li>
+            <li>
+                <button onclick="getJoke()">Pun</button>
+            </li>
+            <li>
+                <button onclick="getJoke()">Spooky</button>
+            </li>
+            <li>
+                <button onclick="getJoke()">Christmas</button>
+            </li>
+        </menu>
     </main>
     <footer>
-        <small>&copy; Chris Nordrum, 2025</small>
+        <small>&copy; Chris Nordrum, <span id="fYear">2025</span>.</small>
     </footer>
 
     <script src="script.js"></script>
