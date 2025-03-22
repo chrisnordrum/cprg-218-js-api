@@ -13,8 +13,10 @@ const getJoke = () => {
         joke.textContent = data.joke || `${data.setup} ... ${data.delivery}`;
         if (data.category == `Pun`) {
             title.textContent = `A Random Pun`;
+            document.title = `A Random Pun`;
         } else {
             title.textContent = `A Random ${data.category} Joke`;
+            document.title = `A Random ${data.category} Joke`;
         }
     })
 }
