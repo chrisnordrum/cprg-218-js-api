@@ -1,5 +1,5 @@
 // Random Joke
-fetch("https://v2.jokeapi.dev/joke/Any?safe-mode")
+fetch(`https://v2.jokeapi.dev/joke/Any?safe-mode`)
 .then(response => response.json())
 .then (data => {
     joke.textContent = data.joke || `${data.setup} ... ${data.delivery}`;
@@ -7,7 +7,7 @@ fetch("https://v2.jokeapi.dev/joke/Any?safe-mode")
 
 // Random Joke by Category
 const getJoke = () => {
-    fetch(`https://v2.jokeapi.dev/joke/${event.srcElement.id}?safe-mode`)
+    fetch(`https://v2.jokeapi.dev/joke/${event.srcElement.innerHTML}?safe-mode`)
     .then (response => response.json())
     .then (data => {
         joke.textContent = data.joke || `${data.setup} ... ${data.delivery}`;
